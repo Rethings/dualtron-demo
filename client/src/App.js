@@ -16,16 +16,10 @@ function App() {
   return (
     <div className="flex flex-col h-screen">
       <Router>
-        <Route exact path='/login'>
-          <LoginPage />
-        </Route>
-        <Route exact path='/sign-up'>
-          <RegisterPage />
-        </Route>
-        <Route exact path='/dashboard'>
-          <Dashboard />
-        </Route>
-      </Router>asdad
+        <Route exact path='/login' component={LoginPage} />
+        <Route exact path='/sign-up' component={RegisterPage} />
+        <Route exact path='/dashboard' component={Dashboard} />
+      </Router>
     </div>
   );
 }
