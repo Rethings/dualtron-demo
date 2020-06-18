@@ -4,10 +4,10 @@ module.exports = {
   separator: ':',
   theme: {
     screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
+      sm: {'max': '640px'},
+      md: {'max': '768px'},
+      lg: {'max': '1024px'},
+      xl: {'max': '1280px'},
     },
     colors: {
       transparent: 'transparent',
@@ -269,6 +269,18 @@ module.exports = {
       ...theme('spacing'),
       full: '100%',
       screen: '100vh',
+      '10vh': '10vh',
+      '20vh': '20vh',
+      '30vh': '30vh',
+      '40vh': '40vh',
+      '50vh': '50vh',
+      '60vh': '60vh',
+      '70vh': '70vh',
+      '80vh': '80vh',
+      '90vh': '90vh',
+      '100vh': '100vh',
+      '1/3': '33.333333%',
+      '2/3': '66.666667%',
     }),
     inset: {
       '0': '0',

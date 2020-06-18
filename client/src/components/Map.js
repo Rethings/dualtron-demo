@@ -4,11 +4,32 @@ import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
 const params = {v: '3.exp', key: 'AIzaSyDfvQtvIIe7IqowFMUNaWfEpNs7ZuBH36Y'};
 
 export default class Map extends Component {
-  state = {
-    coords: {
-      lat: 51.5258541,
-      lng: -0.08040660000006028
+  constructor(props) {
+    super(props);
+    this.state = {
+      coords: {
+        lat: 0,
+        lng: 0
+      }
     }
+
+    this.onNewCoordinates = this.onNewCoordinates.bind(this);
+  }
+
+  componentWillMount() {
+    window.mq.subscribe('jms-vt0git1/car-tracker', this.onNewCoordinates);
+  }
+
+  onNewCoordinates(message) {
+    let newMessage = message.split(',');
+    let newCoords = {
+      lat: parseInt(newMessage[0]),
+      lng: parseInt(newMessage[1])
+    }
+
+    this.setState({
+      coords: newCoords
+    })
   }
 
   onMapCreated(map) {
@@ -33,7 +54,6 @@ export default class Map extends Component {
         lng: e.latLng.lng()
       }
     })
-
   }
 
   render() {
