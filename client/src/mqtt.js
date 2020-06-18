@@ -2,8 +2,11 @@ import Mqtt from 'mqtt';
 
 window.mq = {
   client: null,
+<<<<<<< HEAD
   value: "",
   callback: "",
+=======
+>>>>>>> 7e01434cc8dd069fc774943d9b49205b38d99143
   init() {
     this.client = Mqtt.connect( 'mqtts://mq.meeo.xyz', {
       username: 'jms-vt0git1',
@@ -15,7 +18,10 @@ window.mq = {
     this.client.on( 'reconnect', this.reconnectCallback.bind(this));
     this.client.on( 'offline', this.offlineCallback.bind(this));
     this.client.on( 'error', this.errorCallback.bind(this));
+<<<<<<< HEAD
     this.client.on('message', this.newMessageCallback.bind(this));
+=======
+>>>>>>> 7e01434cc8dd069fc774943d9b49205b38d99143
   },
   connectCallback() {
     console.log('Connected...');
@@ -29,6 +35,7 @@ window.mq = {
   errorCallback( err ) {
     console.log('Error...', err);
   },
+<<<<<<< HEAD
   newMessageCallback(topic, message) {
     console.log("Message","" + message);
 
@@ -40,6 +47,11 @@ window.mq = {
 
     this.client.subscribe( topic, {
       qos: 1
+=======
+  subscribe(topic) {
+    this.client.subscribe( topic, function() {
+      console.log("Subscribed...");
+>>>>>>> 7e01434cc8dd069fc774943d9b49205b38d99143
     })
   },
   publish(topic, data) {
