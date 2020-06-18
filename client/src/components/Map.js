@@ -27,6 +27,8 @@ export default class Map extends Component {
       lng: parseInt(newMessage[1])
     }
 
+    console.log(newCoords);
+
     this.setState({
       coords: newCoords
     })
