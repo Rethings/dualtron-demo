@@ -4,7 +4,7 @@ const Input = (props) => {
   const { onChange } = props;
 
   return (
-    <input onChange={onChange} maxLength="1" className="w-1/6 px-1 py-2 mx-2 sm:mx-1 bg-gray-400 border-b-2 border-teal-600 text-center " />
+    <input onChange={onChange} maxLength="1" className="w-1/6 px-1 py-2 mx-2 sm:mx-1 bg-gray-400 border-b-2 border-red-800 text-center " />
   )
 };
 
@@ -47,7 +47,7 @@ class OTPModal extends Component {
             {renderInputs()}
           </div>
 
-          <button onClick={this.onSubmitOTP} className="px-4 py-2 bg-teal-600 hover:bg-teal-500 rounded text-white">Submit</button>
+          <button onClick={this.onSubmitOTP} className="px-4 py-2 bg-red-800 hover:bg-teal-500 rounded text-white">Submit</button>
         </div>
 
         <div onClick={this.props.onClose} className="absolute left-0 top-0 w-full h-full bg-gray-800 opacity-50" />

@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 
+import logo from '../assets/Dualtron_type.png';
+
 import Profile from './Profile';
 import OTPModal from './OTPModal';
 
 class Navbar extends Component {
   state = {
-    imobilize: false,
+    imobilized: false,
     isModalOpen: false,
   }
 
@@ -30,16 +32,22 @@ class Navbar extends Component {
     this.setState({ isModalOpen: false });
   }
 
+  renderSwitchButton = () => {
+    return (
+      <div onClick={this.onOpenModal} className={`h-8 w-16 p-1 flex flex-no-wrap rounded-full bg-black cursor-pointer transition duration-500 ${this.state.imobilized ? "bg-red-800" : ""}`}>
+        <div className={`transition-all duration-500 ease-in-out ${this.state.imobilized ? "flex-1" : ""}`} />
+        <div className={`h-full w-6 rounded-full bg-white`} />
+      </div>
+    )
+  }
+
   render () {
     return (
-      <nav className="py-3 px-5  w-full text-white flex items-center justify-between bg-teal-900">
-        <div onClick={this.onOpenModal} className={`h-8 w-16 p-1 flex flex-no-wrap rounded-full bg-gray-600 cursor-pointer transition duration-500 ${this.state.imobilize ? "bg-green-600" : ""}`}>
-          <div className={`transition-all duration-500 ease-in-out ${this.state.imobilize ? "flex-1" : ""}`} />
-          <div className={`h-full w-6 rounded-full bg-gray-200`} />
-        </div>
+      <nav className="py-3 px-20  w-full text-white flex items-center justify-between bg-white">
+        <button className={`${this.state.imobilized ? "bg-red-800 hover:bg-red-700" : "bg-green-800 hover:bg-green-700"} px-4 py-1 bg-red-800 rounded`}>{this.state.imobilized ? "Imobalize" : "Mobalize"}</button>
 
         <div>
-          <h1>LOGO</h1>
+          <img src={logo} height="80" width="200" />
         </div>
 
         <Profile />
