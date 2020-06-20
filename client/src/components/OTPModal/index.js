@@ -47,7 +47,7 @@ class OTPModal extends Component {
             {renderInputs()}
           </div>
 
-          <button onClick={this.onSubmitOTP} className="px-4 py-2 bg-red-800 hover:bg-teal-500 rounded text-white">Submit</button>
+          <button onClick={this.onSubmitOTP} className="px-4 py-2 bg-red-700 hover:bg-red-600 rounded text-white">Submit</button>
         </div>
 
         <div onClick={this.props.onClose} className="absolute left-0 top-0 w-full h-full bg-gray-800 opacity-50" />
