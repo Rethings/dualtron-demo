@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dualtron-demo/precache-manifest.a880da6204271bb68dc94745871abe0d.js"
+  "/dualtron-demo/precache-manifest.2852ce79766b6de38e83cfaa342e9b46.js"
 );
 
 self.addEventListener('message', (event) => {
