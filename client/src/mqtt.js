@@ -2,8 +2,8 @@ import Mqtt from 'mqtt';
 
 window.mq = {
   client: null,
-  value: "",
-  callback: null,
+  values: [],
+  callbacks: [],
   init() {
     this.client = Mqtt.connect( 'mqtts://mq.meeo.xyz', {
       username: 'jms-vt0git1',
@@ -30,25 +30,32 @@ window.mq = {
     console.log('Error...', err);
   },
   newMessageCallback(topic, message) {
-    console.log("Message","" + message);
-
-    this.value = "" + message;
-
-    if(this.callback !== null) {
-      this.callback("" + message);
+    this.values[topic] = "" + message;
+    if ( Array.isArray( this.callbacks[topic] ) ) {
+      this.callbacks[topic].forEach( function ( cb ) {
+        if ( typeof cb === "function" )
+          cb( "" + message )
+      } )
     }
   },
   subscribe(topic, callback) {
-    this.callback = callback;
+    if ( !Array.isArray( this.callbacks[topic] ) ) {
+      this.callbacks[topic] = []
+      this.client.subscribe( topic, {
+        qos: 1,
+      } )
+    }
+    this.callbacks[topic].push( callback )
 
-    this.client.subscribe( topic, {
-      qos: 1
-    });
+    if ( typeof this.values[topic] !== "undefined" ) {
+      callback( this.values[topic] )
+    }
   },
   publish(topic, data) {
-    this.client.publish( topic, "" + data, function() {
-      console.log("Published...");
-    })
+    this.client.publish( topic, "" + data, {
+      qos   : 1,
+      retain: true
+    } )
   }
 }
 

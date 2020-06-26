@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './assets/main.css';
+import './css/main.css';
 import './mqtt';
 import App from './App';
 import * as serviceWorker from './serviceWorker';

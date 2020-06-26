@@ -2,12 +2,11 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
 } from 'react-router-dom';
 
-import LoginPage from './routes/LoginPage';
-import RegisterPage from './routes/RegisterPage';
-import Dashboard from './routes/Dashboard';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
