@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ff62891cfcc8bc81cd31fa54ea0d3860",
+    "revision": "2d76da182e7be40e2c2e30b49f7a1d2b",
     "url": "/dualtron-demo/index.html"
   },
   {
-    "revision": "5fdec882e2350c934ede",
+    "revision": "5c4e1012e9dedc657f82",
     "url": "/dualtron-demo/static/css/main.3dfd941a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dualtron-demo/static/js/2.e3ad3c47.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5fdec882e2350c934ede",
-    "url": "/dualtron-demo/static/js/main.083fa0a3.chunk.js"
+    "revision": "5c4e1012e9dedc657f82",
+    "url": "/dualtron-demo/static/js/main.40d7961d.chunk.js"
   },
   {
     "revision": "885072b77481622033e3",

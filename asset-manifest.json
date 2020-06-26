@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/dualtron-demo/static/css/main.3dfd941a.chunk.css",
-    "main.js": "/dualtron-demo/static/js/main.083fa0a3.chunk.js",
-    "main.js.map": "/dualtron-demo/static/js/main.083fa0a3.chunk.js.map",
+    "main.js": "/dualtron-demo/static/js/main.40d7961d.chunk.js",
+    "main.js.map": "/dualtron-demo/static/js/main.40d7961d.chunk.js.map",
     "runtime-main.js": "/dualtron-demo/static/js/runtime-main.f963cc70.js",
     "runtime-main.js.map": "/dualtron-demo/static/js/runtime-main.f963cc70.js.map",
     "static/js/2.e3ad3c47.chunk.js": "/dualtron-demo/static/js/2.e3ad3c47.chunk.js",
     "static/js/2.e3ad3c47.chunk.js.map": "/dualtron-demo/static/js/2.e3ad3c47.chunk.js.map",
     "index.html": "/dualtron-demo/index.html",
-    "precache-manifest.2852ce79766b6de38e83cfaa342e9b46.js": "/dualtron-demo/precache-manifest.2852ce79766b6de38e83cfaa342e9b46.js",
+    "precache-manifest.33587b6690e761427fb6b571387f0f60.js": "/dualtron-demo/precache-manifest.33587b6690e761427fb6b571387f0f60.js",
     "service-worker.js": "/dualtron-demo/service-worker.js",
     "static/css/main.3dfd941a.chunk.css.map": "/dualtron-demo/static/css/main.3dfd941a.chunk.css.map",
     "static/js/2.e3ad3c47.chunk.js.LICENSE.txt": "/dualtron-demo/static/js/2.e3ad3c47.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.f963cc70.js",
     "static/js/2.e3ad3c47.chunk.js",
     "static/css/main.3dfd941a.chunk.css",
-    "static/js/main.083fa0a3.chunk.js"
+    "static/js/main.40d7961d.chunk.js"
   ]
 }
